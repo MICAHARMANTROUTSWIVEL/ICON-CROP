@@ -3,6 +3,8 @@ import { Construct } from 'constructs';
 import { createIconBucket } from './s3';
 import {createLambdaExecutionRole} from './iam';
 import { createLambdaApiGateway } from './lambda-api';
+import { createIconCropFunction } from './lambda';
+
 import { create } from 'domain';
 // import * as sqs from 'aws-cdk-lib/aws-sqs';
 
@@ -15,4 +17,3 @@ export class IconCropStack extends cdk.Stack {
     const apiGatewayToLambda = createLambdaApiGateway(this, iconDest.bucketName, iconDest.bucketName);
   }
 }
-cd 
