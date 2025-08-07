@@ -15,7 +15,8 @@ export function createIconBucket(scope: Construct): {iconSource: s3.Bucket, icon
         blockPublicAccess:  new s3.BlockPublicAccess({ 
         blockPublicAcls: false, 
         ignorePublicAcls: false, 
-        blockPublicPolicy: false }), 
+        blockPublicPolicy: false,
+     }), 
         publicReadAccess: true } )
 
         iconDest.addToResourcePolicy(
