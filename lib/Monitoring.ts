@@ -10,12 +10,12 @@ export function setupMonitoring(scope: Construct, iconCrop: lambda.Function): vo
         retention: logs.RetentionDays.ONE_WEEK,
       });
 
-      new cloudwatch.Alarm(scope, 'ErrorAlarm', {
-        metric: iconCrop.metricErrors(),
-        threshold: 1,
-        evaluationPeriods: 1,
-        datapointsToAlarm: 1
-      });
+    //   new cloudwatch.Alarm(scope, 'ErrorAlarm', {
+    //     metric: iconCrop.metricErrors(),
+    //     threshold: 1,
+    //     evaluationPeriods: 1,
+    //     datapointsToAlarm: 1
+    //   });
 
 
 // new cloudwatch.Dashboard(scope, 'IconCropDashBoard', {
