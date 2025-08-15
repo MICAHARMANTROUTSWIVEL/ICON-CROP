@@ -18,16 +18,16 @@ export function setupMonitoring(scope: Construct, iconCrop: lambda.Function): vo
       });
 
 
-new cloudwatch.Dashboard(scope, 'IconCropDashBoard', {
-  widgets: [
-    [new cloudwatch.GraphWidget({
-      title: 'Icon Crop Function Invocations',
-      left: [iconCrop.metricErrors()],
-    }),
-    new cloudwatch.GraphWidget({
-      title: 'Icon Crop Function Errors',
-      right: [iconCrop.metricErrors()]
-    })
-  ]]
-});
+// new cloudwatch.Dashboard(scope, 'IconCropDashBoard', {
+//   widgets: [
+//     [new cloudwatch.GraphWidget({
+//       title: 'Icon Crop Function Invocations',
+//       left: [iconCrop.metricErrors()],
+//     }),
+//     new cloudwatch.GraphWidget({
+//       title: 'Icon Crop Function Errors',
+//       right: [iconCrop.metricErrors()]
+//     })
+//   ]]
+// });
 }
