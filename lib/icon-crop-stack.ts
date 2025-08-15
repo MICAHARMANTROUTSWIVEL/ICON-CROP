@@ -18,6 +18,6 @@ export class IconCropStack extends cdk.Stack {
     //const apiGatewayToLambda = createLambdaApiGateway(this, iconDest.bucketName, iconDest.bucketName);
     const iconCropFunction = createIconCropFunction(this, lambdaRole, iconSource, iconDest);
     const apiGateway = createApiGateway(this, iconCropFunction);
-    setupMonitoring(this, iconCropFunction);
+    //setupMonitoring(this, iconCropFunction);
   }
 }
