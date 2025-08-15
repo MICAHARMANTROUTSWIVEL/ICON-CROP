@@ -18,14 +18,14 @@ export function createApiGateway(scope: Construct, handler: lambda.Function): ap
     authorizationType: apigateway.AuthorizationType.NONE,
   });
 
-  /* const deployment = new apigateway.Deployment(scope, 'Deployment', {
-    api: api,
-  });
+  // const deployment = new apigateway.Deployment(scope, 'Deployment', {
+  //   api: api,
+  // });
 
-  new apigateway.Stage(scope, 'Staging', {
-    deployment: deployment,
-    stageName: 'dev',
-  }); */
+  // new apigateway.Stage(scope, 'Staging', {
+  //   deployment: deployment,
+  //   stageName: 'dev',
+  // }); 
 
   return api;
 }
